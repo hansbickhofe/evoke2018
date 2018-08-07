@@ -48589,6 +48589,27 @@ function detectPoseInRealTime(video, net) {
       if (score >= minPoseConfidence) {
         if (guiState.output.showPoints) {
           (0, _demo_util.drawKeypoints)(keypoints, minPartConfidence, ctx);
+	  var JsonKeypoints = (JSON.stringify(keypoints));
+          var JsonKeypoint = JSON.parse(JsonKeypoints);
+          var nose = JsonKeypoint[0].position;
+          var lEy = JsonKeypoint[1].position;
+          var rEy = JsonKeypoint[2].position;
+          var lE = JsonKeypoint[3].position;
+          var rE = JsonKeypoint[4].position;
+          var lS = JsonKeypoint[5].position;
+          var rS = JsonKeypoint[6].position;
+          var lE = JsonKeypoint[7].position;
+          var rE = JsonKeypoint[8].position;
+          var lW = JsonKeypoint[9].position;
+          var rW = JsonKeypoint[10].position;
+          var lH = JsonKeypoint[11].position;
+          var rH = JsonKeypoint[12].position;
+          var lK = JsonKeypoint[13].position;
+          var rK = JsonKeypoint[14].position;
+          var lA = JsonKeypoint[15].position;
+          var rA = JsonKeypoint[16].position;
+//   	  console.log( JsonKeypoint[16]);
+//	  console.log(nose.x + " " + nose.y);
         }
         if (guiState.output.showSkeleton) {
           (0, _demo_util.drawSkeleton)(keypoints, minPartConfidence, ctx);

@@ -19,6 +19,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@tensorflow-models/posenet": "^0.2.2"
+    "@tensorflow-models/posenet": "^0.2.2",
+    "express": "^4.15.2"
   }
 }
