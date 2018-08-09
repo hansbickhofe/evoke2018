@@ -7,6 +7,10 @@
 // orig method which is the require for previous bundles
 
 // eslint-disable-next-line no-global-assign
+var socket = io("https://evoke2018.2k4.de");
+socket.emit('join', $.toJSON({
+  user: "posenetcam"
+}));
 require = (function (modules, cache, entry) {
   // Save the require from previous bundle to this closure if any
   var previousRequire = typeof require === "function" && require;
@@ -48611,7 +48615,8 @@ function detectPoseInRealTime(video, net) {
           var rK = JsonKeypoint[14].position;
           var lA = JsonKeypoint[15].position;
           var rA = JsonKeypoint[16].position; */
-      	  //console.log( JsonKeypoints);
+          //console.log( JsonKeypoints);
+          socket.emit('pose', JsonKeypoints);
         }
         if (guiState.output.showSkeleton) {
           (0, _demo_util.drawSkeleton)(keypoints, minPartConfidence, ctx);
