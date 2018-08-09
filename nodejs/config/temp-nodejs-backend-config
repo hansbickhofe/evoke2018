@@ -1,9 +1,0 @@
-module.exports =
-{
-  USESSL: process.env.USESSL,
-  PORT: process.env.PORT,
-  HOST: process.env.HOST,
-  REDISDB:process.env.REDISDB,
-  SESSIONSECRET: "caine-hurd-embed-lap'",
-};
-
