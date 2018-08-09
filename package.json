@@ -1,25 +1,16 @@
 {
-  "name": "tensorflow-models",
-  "version": "0.0.1",
+  "name": "nodejs-pub-sub-chat-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:steffenwt/nodejs-pub-sub-chat-demo.git",
+  "author": "steffenwt <steffenwt@users.noreply.github.com>",
+  "license": "MIT",
   "scripts": {
-    "build_and_test_all": "cd posenet && yarn && yarn build && yarn lint && yarn test-travis",
-    "link-local": "yalc link",
-    "presubmit": "ts-node presubmit.ts"
+    "redis": "node app_redis.js",
+    "sockets": "node app.js"
   },
-  "devDependencies": {
-    "@types/node": "~10.3.4",
-    "@types/shelljs": "~0.8.0",
-    "clang-format": "~1.2.2",
-    "fs": "~0.0.1-security",
-    "jasmine": "~3.1.0",
-    "shelljs": "0.8.2",
-    "ts-node": "~5.0.0",
-    "typescript": "~2.9.2",
-    "yalc": "~1.0.0-pre.21"
-  },
-  "license": "Apache-2.0",
   "dependencies": {
-    "@tensorflow-models/posenet": "^0.2.2",
-    "express": "^4.15.2"
+    "redis": "^2.8.0",
+    "socket.io": "^2.0.3"
   }
 }
